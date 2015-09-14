@@ -20,4 +20,8 @@ allprojects {
         options.encoding = "UTF-8"
         options.compilerArgs << "-Xlint:unchecked"
     }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
 }
